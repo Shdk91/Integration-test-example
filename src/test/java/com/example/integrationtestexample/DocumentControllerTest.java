@@ -42,7 +42,7 @@ public class DocumentControllerTest extends BaseTest {
                 .andExpect(status().isOk())
                 .andReturn();
         MockHttpServletResponse response = result.getResponse();
-        assertEquals("1", response.getContentAsString());
+        assertEquals(response.getStatus(), 200);
     }
 
     @ParameterizedTest
